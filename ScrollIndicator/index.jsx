@@ -1,7 +1,11 @@
 import { useState, useEffect } from "react";
 import "./scroll.style.css";
 
-function ScrollIndicator({ bgColor, barColor, barHeight }) {
+function ScrollIndicator({
+  bgColor = "#9d9d9d",
+  barColor = "blueviolet",
+  barHeight = "4px",
+}) {
   const [scrollPer, setScrollPer] = useState(0);
 
   function handleScroller() {

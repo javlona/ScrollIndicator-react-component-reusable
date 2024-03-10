@@ -23,7 +23,7 @@ const App = () => {
   return (
     <div>
       <ScrollIndicator
-        scrollBgColor="#efefef" // Scroll background color
+        bgColor="#efefef" // Scroll background color
         barColor="#ff6347" // Bar color
         barHeight="5px" // Bar height
       />

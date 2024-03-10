@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import "./scroll.style.css";
 
-function ScrollIndicator() {
+function ScrollIndicator({ bgColor, barColor, barHeight }) {
   const [scrollPer, setScrollPer] = useState(0);
 
   function handleScroller() {
@@ -21,9 +21,15 @@ function ScrollIndicator() {
   }, [scrollPer]);
 
   return (
-    <div style={{ position: "relative" }}>
-      <div className="scroll-bar">
-        <div className="scroll-per" style={{ width: `${scrollPer}%` }}></div>
+    <div style={{ position: "relative", width: "100%" }}>
+      <div
+        className="scroll-bar"
+        style={{ backgroundColor: bgColor, height: barHeight }}
+      >
+        <div
+          className="scroll-per"
+          style={{ width: `${scrollPer}%`, backgroundColor: barColor }}
+        ></div>
       </div>
     </div>
   );
